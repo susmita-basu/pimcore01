@@ -1,0 +1,13 @@
+security:
+    firewalls:
+        webservice:
+            pattern: ^/webservice_bwc  #changing existing url pattern to backward compatibility
+
+            
+        apparels_webservice:
+                pattern: ^/webservice
+                stateless: true
+                provider: pimcore_admin
+                guard:
+                    authenticators:
+                        - EventBundle\Security\Guard\WebserviceAuthenticator
