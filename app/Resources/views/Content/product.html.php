@@ -5,34 +5,52 @@
  * @var \Pimcore\Templating\GlobalVariables $app
  */
 
-$this->extend('layout.html.php');
 
 ?>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-<h1><?= $this->input("headline", ["width" => 540]); ?></h1>
-<div class="product-info">
-    <?php if($this->editmode):
-        echo $this->relation('products');
-    else: ?>
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
     <div id="product">
         <?php
-        /** @var \Pimcore\Model\DataObject\Products $products */
-        $products = $this->relation('products')->getElement();
-        ?>
-        <h2><?= $this->escape($products->getName()); ?></h2>
-        <div class="content">
-            <?= $products->getDescription(); ?>
-        </div>
-        <div class="content">
-    <?php
-    $picture = $products->getProductImage();
-    if($picture instanceof \Pimcore\Model\Asset\Image):
-        /** @var \Pimcore\Model\Asset\Image $ProductImage */
-        
-    ?>
-        <?= $picture->getThumbnail("content")->getHtml(); ?>
-    <?php endif; ?> 
-</div>
+            $prod = new \Pimcore\Model\DataObject\Products\Listing();
+            foreach($prod as $products) 
+            {
+                $prod = $this->relation('products')->getElement();?>
+                <table>
+                    <tr>
+                        <td><?= $products->getSKU(); ?></td>
+                        <td><?= $products->getName(); ?></td>
+                        <td><?= $products->getDescription(); ?></td>
+                        <td><?= $products->getPrice(); ?></td>
+                        <td><?= $products->getGender(); ?></td>
+                        <td><?= $products->getTest(); ?></td>
+                        <td><?= $products->getMadeIn(); ?></td>
+                        <td><?= $products->getFabric(); ?></td>
+                        <td><?= $products->getBrand(); ?></td>
+                        <td><?= $products->getSize(); ?></td>
+                        <td><?= $products->getDiscount(); ?></td>
+                        <td><?= $products->getLanguageKnown(); ?></td>
+                    </tr>
+                </table>
+                
+    
+    
+            <?php } ?>
+    
     </div>
-    <?php endif; ?>
-</div>

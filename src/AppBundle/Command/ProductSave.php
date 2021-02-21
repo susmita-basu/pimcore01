@@ -55,7 +55,8 @@ class ProductSave extends AbstractCommand
 
 /////////////////// Passing data through json file ////////////////////////////
 
-            
+            p_r($data);
+            die;
             $object->setKey($prod->key);
             $object->setParentId(8);
             $object->setPublished(true);
