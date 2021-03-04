@@ -26,3 +26,7 @@ services:
         tags:
             - { name: kernel.event_listener, event: pimcore.dataobject.preUpdate, method: onEmailUpdate }
 
+    AppBundle\EventListener\DateListener:
+        tags:
+            - { name: kernel.event_listener, event: pimcore.dataobject.preUpdate, method: getDate }
+

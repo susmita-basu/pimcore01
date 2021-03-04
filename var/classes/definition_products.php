@@ -24,6 +24,8 @@ Fields Summary:
 - test [multiselect]
 - warranty [quantityValue]
 - availableFrom [date]
+- startDate [date]
+- endDate [date]
 */ 
 
 
@@ -32,7 +34,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'products',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1613576159,
+   'modificationDate' => 1614589822,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -131,7 +133,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'name' => 'name',
              'title' => 'name',
              'tooltip' => '',
-             'mandatory' => true,
+             'mandatory' => false,
              'noteditable' => false,
              'index' => false,
              'locked' => false,
@@ -431,6 +433,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
               array (
                 'key' => 'Label',
                 'value' => 'Label',
+              ),
+              4 => 
+              array (
+                'key' => 'abc',
+                'value' => 'abc',
               ),
             ),
              'width' => '',
@@ -5715,6 +5722,54 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'useCurrentDate' => false,
              'name' => 'availableFrom',
              'title' => 'Available From',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'defaultValueGenerator' => '',
+          )),
+          18 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+             'fieldtype' => 'date',
+             'queryColumnType' => 'bigint(20)',
+             'columnType' => 'bigint(20)',
+             'phpdocType' => '\\Carbon\\Carbon',
+             'defaultValue' => NULL,
+             'useCurrentDate' => false,
+             'name' => 'startDate',
+             'title' => 'Start Date',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => NULL,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'defaultValueGenerator' => '',
+          )),
+          19 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+             'fieldtype' => 'date',
+             'queryColumnType' => 'bigint(20)',
+             'columnType' => 'bigint(20)',
+             'phpdocType' => '\\Carbon\\Carbon',
+             'defaultValue' => NULL,
+             'useCurrentDate' => false,
+             'name' => 'endDate',
+             'title' => 'End Date',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,

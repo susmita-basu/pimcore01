@@ -1,2 +1,3 @@
-"sku","name","size","price","fabric","discount","gender","brand","description","madeIn","languageKnown","test","warranty","availableFrom"
-"1","Shirt","L","550","Cotton","5","Male","Park Avenue","desc","IN","en","abc","5","3/10/2020"
+"key","sku","name","size","price","fabric","discount","gender","brand","description","madeIn","image","color","sleeves","suitable","warranty","months","test","language","length","neck","category"
+"0000004","1","Shirt","L","550","Cotton","5","Male","Park Avenue","Description 321","IN","/shirts/shirtMulticolor.jpeg","0, 255,255, 0","Full Sleeve","Casual Wear","2","3","abc","bn","Full length","V Neck","Shirt"
+"0000005","2","Suit","L","550","Cotton","5","Female","Park Avenue","Description 322","IN","/shirts/shirtMulticolor.jpeg","0, 255,255, 0","Full Sleeve","Casual Wear","2","3","abc","bn","Full length","Collered","Kurti"

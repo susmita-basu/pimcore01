@@ -16,7 +16,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'importFile',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1613664885,
+   'modificationDate' => 1614357484,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -100,7 +100,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'mandatory' => false,
              'noteditable' => false,
              'index' => false,
-             'locked' => NULL,
+             'locked' => false,
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
@@ -128,7 +128,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
               0 => 
               array (
-                'assetTypes' => 'unknown',
+                'assetTypes' => 'text',
               ),
             ),
              'documentsAllowed' => false,
@@ -145,7 +145,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'mandatory' => false,
              'noteditable' => false,
              'index' => false,
-             'locked' => NULL,
+             'locked' => false,
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',

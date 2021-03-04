@@ -6,7 +6,7 @@
     class TestListener {
 
         /**
-        * @Param DataObjectEvent $e
+        * @param DataObjectEvent $e
         */
      
         public function onPostUpdate (DataObjectEvent $e) {
